@@ -1,5 +1,33 @@
 <resources>
     <string name="app_name">Marvel</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_characters">Characters</string>
+    <string name="tab_favorite">Favorite</string>
+
+    <string name="marvel_base_url">https://gateway.marvel.com/</string>
+    <string name="marvel_public_key">e2c5e907c9d20e3250c010874cda9f57</string>
+    <string name="marvel_private_key">8f5a94fc2a420f66197b4c055bd62f9e87458251</string>
+
+    <string name="dialog_thumbnail">Thumbnail</string>
+    <string name="dialog_urls">Urls</string>
+    <string name="dialog_comics">Comics</string>
+    <string name="dialog_stories">Stories</string>
+    <string name="dialog_events">Events</string>
+    <string name="dialog_series">Series</string>
+
+    <string name="favorite_add_success">즐겨찾기 추가에 성공했습니다</string>
+    <string name="favorite_add_fail">즐겨찾기 추가에 실패했습니다</string>
+    <string name="favorite_remove_success">즐겨찾기 삭제에 성공했습니다</string>
+    <string name="favorite_remove_fail">즐겨찾기 삭제에 실패했습니다</string>
+
+    <string name="paging_finished" translatable="false">마지막 결과 입니다</string>
+    <string name="paging_empty" translatable="false">결과가 없습니다</string>
+
+    <string name="image_download_success">이미지 다운로드를 완료했습니다</string>
+    <string name="image_download_fail">이미지 다운로드를 실패했습니다</string>
+
+    <string name="character_item_url_count">URL : %d</string>
+    <string name="character_item_story_count">STORY : %d</string>
+    <string name="character_item_event_count">EVENT : %d</string>
+    <string name="character_item_series_count">SERIES : %d</string>
+    <string name="character_item_comic_count">COMIC : %d</string>
 </resources>

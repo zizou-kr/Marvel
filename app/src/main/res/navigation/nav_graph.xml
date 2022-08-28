@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.zizou.marvel.presentation.view.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_characterItemsDialogFragment"
+            app:destination="@id/characterItemsDialogFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/characterComicsFragment"
+        android:name="com.zizou.marvel.presentation.view.CharacterComicsFragment"
+        android:label="ComicsFragment" >
+        <action
+            android:id="@+id/action_characterComicsFragment_to_comicDetailFragment"
+            app:destination="@id/comicDetailFragment" />
+        <argument
+            android:name="characterId"
+            app:argType="integer"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/characterEventsFragment"
+        android:name="com.zizou.marvel.presentation.view.CharacterEventsFragment"
+        android:label="EventsFragment" >
+        <action
+            android:id="@+id/action_characterEventsFragment_to_eventDetailFragment"
+            app:destination="@id/eventDetailFragment" />
+        <argument
+            android:name="characterId"
+            app:argType="integer"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/characterSeriesFragment"
+        android:name="com.zizou.marvel.presentation.view.CharacterSeriesFragment"
+        android:label="SeriesFragment" >
+        <action
+            android:id="@+id/action_characterSeriesFragment_to_seriesDetailFragment"
+            app:destination="@id/seriesDetailFragment" />
+        <argument
+            android:name="characterId"
+            app:argType="integer"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/characterStoriesFragment"
+        android:name="com.zizou.marvel.presentation.view.CharacterStoriesFragment"
+        android:label="StoriesFragment" >
+        <action
+            android:id="@+id/action_characterStoriesFragment_to_storyDetailFragment"
+            app:destination="@id/storyDetailFragment" />
+        <argument
+            android:name="characterId"
+            app:argType="integer"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/storyDetailFragment"
+        android:name="com.zizou.marvel.presentation.view.StoryDetailFragment"
+        android:label="StoryDetailFragment" >
+        <argument
+            android:name="story"
+            app:argType="com.zizou.marvel.domain.model.Story"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/seriesDetailFragment"
+        android:name="com.zizou.marvel.presentation.view.SeriesDetailFragment"
+        android:label="SeriesDetailFragment" >
+        <argument
+            android:name="series"
+            app:argType="com.zizou.marvel.domain.model.Series"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/comicDetailFragment"
+        android:name="com.zizou.marvel.presentation.view.ComicDetailFragment"
+        android:label="ComicDetailFragment" >
+        <argument
+            android:name="comic"
+            app:argType="com.zizou.marvel.domain.model.Comic"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventDetailFragment"
+        android:name="com.zizou.marvel.presentation.view.EventDetailFragment"
+        android:label="EventDetailFragment" >
+        <argument
+            android:name="event"
+            app:argType="com.zizou.marvel.domain.model.Event"/>
+    </fragment>
+    <dialog
+        android:id="@+id/characterItemsDialogFragment"
+        android:name="com.zizou.marvel.presentation.view.dialog.CharacterItemDialogFragment"
+        android:label="CharacterItemsDialogFragment" >
+        <action
+            android:id="@+id/action_characterItemsDialogFragment_to_characterSeriesFragment"
+            app:destination="@id/characterSeriesFragment" />
+        <action
+            android:id="@+id/action_characterItemsDialogFragment_to_characterComicsFragment"
+            app:destination="@id/characterComicsFragment" />
+        <action
+            android:id="@+id/action_characterItemsDialogFragment_to_characterEventsFragment"
+            app:destination="@id/characterEventsFragment" />
+        <action
+            android:id="@+id/action_characterItemsDialogFragment_to_characterStoriesFragment"
+            app:destination="@id/characterStoriesFragment" />
+        <argument
+            android:name="character"
+            app:argType="com.zizou.marvel.domain.model.Character"/>
+        <action
+            android:id="@+id/action_characterItemsDialogFragment_to_websiteFragment"
+            app:destination="@id/websiteFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/websiteFragment"
+        android:name="com.zizou.marvel.presentation.view.WebsiteFragment"
+        android:label="WebsiteFragment" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
